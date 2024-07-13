@@ -9,12 +9,11 @@
             <div class="bg-primary text-white p-4 text-center">
                 <h1>Cartelera</h1>
             </div>
-            <p class="p-2">Hola, este es tu primer sitio en Django</p>
             <ul class="list-group">
                 {% for movie in movies %}
                 <li class="list-group-item">
-                    <a href="movie/{{movie_id}}">{{ Movie | capfirst }}</a>
-                    <p>{{movie.title}}</p>
+                    <a href="movie/{{movie.id}}">{{ movie | capfirst }}</a> 
+                    <p>{{movie.release_year}}</p>
                 </li>
                 {% endfor %}
             </ul>
